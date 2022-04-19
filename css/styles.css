@@ -4,6 +4,14 @@
     box-sizing: border-box;
 }
 
+.imagen-carousel {
+    height: 400px;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.35);
+}
+
 .row-cards {
     margin: 10px;
-}
