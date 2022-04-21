@@ -16,3 +16,46 @@
 .row-cards {
     margin: 10px;
 }
+
+.container {
+    width: 100%;
+    margin: 20px auto;
+    background-color: rgb(49, 47, 47);
+    color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+div h4 {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+div h2 {
+    text-align: center;
+}
+
+div a {
+    font-size: 15px;
+}
+
+div.container img.icono1 {
+    float: left;
+    margin-right: 15px;
+}
+
+div.container img.icono2 {
+    float: left;
+    margin-right: 15px;
+}
+
+div.container img.icono3 {
+    float: left;
+    margin-right: 15px;
+}
+
+div.container img.icono4 {
+    float: left;
+    margin-right: 15px;
+}
