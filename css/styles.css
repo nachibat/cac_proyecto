@@ -59,3 +59,7 @@ div.container img.icono4 {
     float: left;
     margin-right: 15px;
 }
+
+div.container a {
+    padding: 0px;
+}
