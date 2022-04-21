@@ -30,6 +30,7 @@ div h4 {
     color: white;
     font-size: 20px;
     font-weight: bold;
+    margin-bottom: 0;
 }
 
 div h2 {
@@ -38,6 +39,7 @@ div h2 {
 
 div a {
     font-size: 15px;
+    color: aqua;
 }
 
 div.container img.icono1 {
