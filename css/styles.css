@@ -13,8 +13,21 @@
     background: rgba(0, 0, 0, 0.35);
 }
 
+.h2cards {
+    margin-left: 51px;
+    margin-top: 50px;
+}
+
 .row-cards {
-    margin: 10px;
+    margin: 0px 100px 40px;
+}
+
+.card-img-top {
+    height: 18rem;
+}
+
+.btn-primary {
+    background-color: #202529;
 }
 
 .container {
@@ -103,3 +116,4 @@ footer ul li a {
 footer ul li a:hover {
     color: #e1e1e1;
 }
+
