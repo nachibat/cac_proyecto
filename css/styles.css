@@ -4,6 +4,19 @@
     box-sizing: border-box;
 }
 
+
+
+header .icons a ion-icon{
+    font-size: 30px;
+    color: white;
+    margin: 5px;
+} 
+
+header ul{
+    font-size: 50px;
+    font-weight: bold;
+}
+
 .imagen-carousel {
     height: 400px;
     object-fit: cover;
@@ -13,6 +26,107 @@
     background: rgba(0, 0, 0, 0.35);
 }
 
-.row-cards {
-    margin: 10px;
+.h2cards {
+    margin-left: 51px;
+    margin-top: 50px;
 }
+
+.row-cards {
+    margin: 0px 100px 40px;
+}
+
+.card-img-top {
+    height: 18rem;
+}
+
+.btn-primary {
+    background-color: #202529;
+}
+
+.container {
+    width: 100%;
+    margin: 20px auto;
+    background-color: rgb(49, 47, 47);
+    color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+div h4 {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+div h2 {
+    text-align: center;
+}
+
+div a {
+    font-size: 15px;
+    color: aqua;
+}
+
+div.container img.icono1 {
+    float: left;
+    margin-right: 15px;
+}
+
+div.container img.icono2 {
+    float: left;
+    margin-right: 15px;
+}
+
+div.container img.icono3 {
+    float: left;
+    margin-right: 15px;
+}
+
+div.container img.icono4 {
+    float: left;
+    margin-right: 15px;
+}
+
+div.container a {
+    padding: 0px;
+}
+
+footer .icons a {
+    color: #ffffff;
+    transition: color 0.35s;
+}
+
+footer .icons div:nth-child(1) a:hover {
+    color: #3b5998;
+}
+
+footer .icons div:nth-child(2) a:hover {
+    color: #E1306C;
+}
+
+footer .icons div:nth-child(3) a:hover {
+    color: #00acee;
+}
+
+footer .icons a ion-icon {
+    font-size: 50px;
+}
+
+footer ul {
+    display: flex;
+    padding: 0;
+    width: 100% !important;
+    list-style: none;
+    justify-content: space-evenly;
+}
+
+footer ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    color: #e1e1e1;
+}
+
