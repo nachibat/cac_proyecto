@@ -97,6 +97,36 @@ footer .icons a {
     transition: color 0.35s;
 }
 
+img.class a ion-icon{
+    font-size: 30px;
+    color: blue;
+    margin: 5px;
+} 
+
+header .icons a ion-icon{
+    font-size: 30px;
+    color: white;
+    margin: 5px;
+} 
+
+header .icons a ion-icon{
+    font-size: 30px;
+    color: white;
+    margin: 5px;
+} 
+
+header .icons a ion-icon{
+    font-size: 30px;
+    color: white;
+    margin: 5px;
+} 
+
+header .icons a ion-icon{
+    font-size: 30px;
+    color: white;
+    margin: 5px;
+} 
+
 footer .icons div:nth-child(1) a:hover {
     color: #3b5998;
 }
