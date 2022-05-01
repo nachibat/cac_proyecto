@@ -127,6 +127,27 @@ header .icons a ion-icon{
     margin: 5px;
 } 
 
+.containerListaCategoria {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #420505;
+    color: rgb(128, 128, 128);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.containerListaCategoria img {
+    width: 104px;
+    height: 104px;
+}
+
+div.containerListaCategoria h5 {
+    color: grey;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
 footer .icons div:nth-child(1) a:hover {
     color: #3b5998;
 }
