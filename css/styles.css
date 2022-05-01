@@ -4,15 +4,13 @@
     box-sizing: border-box;
 }
 
-
-
-header .icons a ion-icon{
+header .icons a ion-icon {
     font-size: 30px;
     color: white;
     margin: 5px;
-} 
+}
 
-header ul{
+header ul {
     font-size: 50px;
     font-weight: bold;
 }
@@ -130,3 +128,31 @@ footer ul li a:hover {
     color: #e1e1e1;
 }
 
+.containerCarrito {
+    width: 80%;
+    margin: 20px auto;
+    background-color: white;
+    color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+#a1 {
+    color: white;
+    font-size: 15px;
+}
+
+.containerCarrito div h3 {
+    color: black;
+    font-size: 25px;
+    font-weight: inherit;
+    margin: 0;
+    padding-top: 50px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.containerCarrito div p {
+    color: grey;
+    padding-bottom: 10px;
+}
