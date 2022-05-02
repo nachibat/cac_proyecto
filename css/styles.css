@@ -129,3 +129,33 @@ footer ul li a {
 footer ul li a:hover {
     color: #e1e1e1;
 }
+
+/* Login */
+main form{
+    margin: auto; 
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 20px;
+    width: 500px;
+    border: 1px solid #333;
+    border-radius: 0.5%;
+}
+
+main button{
+    margin: auto;
+    display:block;
+    width: 100%;
+}
+
+
+#Pararegistrarse {
+    text-align: center;
+}
+
+/* Productos */
+
+.contenedor {
+    margin: 0 100px;
+}
+
+/* Fin Productos */
