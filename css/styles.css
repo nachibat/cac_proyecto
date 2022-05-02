@@ -130,7 +130,7 @@ footer ul li a:hover {
     color: #e1e1e1;
 }
 
-
+/* Login */
 main form{
     margin: auto; 
     margin-top: 50px;
@@ -151,3 +151,11 @@ main button{
 #Pararegistrarse {
     text-align: center;
 }
+
+/* Productos */
+
+.contenedor {
+    margin: 0 100px;
+}
+
+/* Fin Productos */
