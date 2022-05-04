@@ -4,15 +4,13 @@
     box-sizing: border-box;
 }
 
-
-
-header .icons a ion-icon{
+header .icons a ion-icon {
     font-size: 30px;
     color: white;
     margin: 5px;
-} 
+}
 
-header ul{
+header ul {
     font-size: 50px;
     font-weight: bold;
 }
@@ -130,10 +128,35 @@ footer ul li a:hover {
     color: #e1e1e1;
 }
 
+
 /* Productos */
 
 .contenedor {
     margin: 0 100px;
 }
 
+
 /* Fin Productos */
+
+
+/* Login */
+
+main form {
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 20px;
+    width: 500px;
+    border: 1px solid #333;
+    border-radius: 0.5%;
+}
+
+main button {
+    margin: auto;
+    display: block;
+    width: 100%;
+}
+
+#Pararegistrarse {
+    text-align: center;
+}
