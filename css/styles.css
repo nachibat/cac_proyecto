@@ -130,15 +130,19 @@ header .icons a ion-icon{
 .containerListaCategoria {
     width: 80%;
     margin: 20px auto;
-    background-color: #420505;
+    background-color: rgb(49, 47, 47);
     color: rgb(128, 128, 128);
     padding: 15px;
     border-radius: 10px;
 }
 
+.containerListaCategoria a {
+    text-decoration: none;
+}
+
 .containerListaCategoria img {
-    width: 104px;
-    height: 104px;
+    width: 80px;
+    height: 80px;
 }
 
 div.containerListaCategoria h5 {
