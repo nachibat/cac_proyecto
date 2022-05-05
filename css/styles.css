@@ -95,6 +95,61 @@ footer .icons a {
     transition: color 0.35s;
 }
 
+img.class a ion-icon{
+    font-size: 30px;
+    color: blue;
+    margin: 5px;
+} 
+
+header .icons a ion-icon{
+    font-size: 30px;
+    color: white;
+    margin: 5px;
+} 
+
+header .icons a ion-icon{
+    font-size: 30px;
+    color: white;
+    margin: 5px;
+} 
+
+header .icons a ion-icon{
+    font-size: 30px;
+    color: white;
+    margin: 5px;
+} 
+
+header .icons a ion-icon{
+    font-size: 30px;
+    color: white;
+    margin: 5px;
+} 
+
+.containerListaCategoria {
+    width: 80%;
+    margin: 20px auto;
+    background-color: rgb(49, 47, 47);
+    color: rgb(128, 128, 128);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.containerListaCategoria a {
+    text-decoration: none;
+}
+
+.containerListaCategoria img {
+    width: 80px;
+    height: 80px;
+}
+
+div.containerListaCategoria h5 {
+    color: grey;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
 footer .icons div:nth-child(1) a:hover {
     color: #3b5998;
 }
