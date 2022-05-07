@@ -72,16 +72,32 @@
             <div class="row">
                 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                     <li class="nav-item" role="presentation">
-                        <button class="btn btn-outline-dark" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Carrito (3)</button>
+                        <button class="btn btn-outline-warning" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Carrito (3)</button>
                     </li>
 
                     <li class="nav-item" role="presentation">
-                        <button class="btn btn-outline-dark" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Guardados (1)</button>
+                        <button class="btn btn-outline-warning" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Guardados (1)</button>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <button class="btn btn-outline-dark" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Borrados (0)</button>
+                        <button class="btn btn-outline-warning" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Borrados (0)</button>
                     </li>
                 </ul>
+
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h6 style="color: grey">Producto</h6>
+                    </div>
+                    <div class="col-sm-3">
+                        <h6 style="color: grey;">Descripción</h6>
+                    </div>
+                    <div class="col-sm-3">
+                        <h6 style="color: grey;">Precio</h6>
+                    </div>
+
+                </div>
+
+
+
                 <hr style="color:black">
                 <!-- LINEA SEPARADORA -->
                 <div class="tab-content" id="pills-tabContent">
@@ -89,30 +105,48 @@
                         <!--h3>Tu carrito está vacío</h3-->
                         <!--p>¿No sabés qué comprar? ¡Miles de productos te esperan!</p-->
                         <div class="col">
+                            <!--COMIENZO-->
+
                             <div class="row">
                                 <img src="https://arcencohogar.vtexassets.com/arquivos/ids/284328-500-auto?v=637651646129130000&width=500&height=auto&aspect=true" class="card-img-top" alt="pava-electrica">
-                                <div class="col">
-                                    <h5 style="color: black;">$4995</h5>
-                                    <p class="card-text">Pava Liliana Matera</p>
+                                <div class="col-sm-3 mt-4">
+                                    <h5 style="color: black;">Pava Liliana Matera</h5>
+                                    <p>Pava eléctrica Liliana AP965 Matera negra 220V - 240V 1.7L</p>
+                                </div>
+                                <div class="col-sm-3">
+                                    <h5 style="color: black;">$4995.00</h5>
+                                </div>
+                                <div class="col-sm-3">
+                                    <button class="btn btn-primary" type="submit">Comprar Ahora</button>
                                 </div>
                             </div>
-                            <div class="row">
 
+                            <div class="row">
                                 <img src="https://arcencohogar.vtexassets.com/arquivos/ids/283702-500-auto?v=637651642479930000&width=500&height=auto&aspect=true" class="card-img-top" alt="lampara-cristal">
-                                <div class="card-body">
-                                    <h5 style="color: black;">$6716</h5>
-                                    <p class="card-text">Lámpara Colgante Ganges</p>
+                                <div class="col-sm-3">
+                                    <h5 style="color: black;">Lámpara Colgante Ganges</h5>
+                                    <p>Lámpara Colgante Ganges 3 Luces,38 Cm. Abitare</p>
                                 </div>
-
+                                <div class="col-sm-3">
+                                    <h5 style="color: black;">$6716.95</h5>
+                                </div>
+                                <div class="col-sm-3">
+                                    <button class="btn btn-primary" type="submit">Comprar Ahora</button>
+                                </div>
                             </div>
+
                             <div class="row">
-
                                 <img src="https://arcencohogar.vtexassets.com/arquivos/ids/276150-500-auto?v=637651593741370000&width=500&height=auto&aspect=true" class="card-img-top" alt="lampara-globo">
-                                <div class="card-body">
-                                    <h5 style="color: black;">$2545,75</h5>
-                                    <p class="card-text">Lámpara de Mesa Globo</p>
+                                <div class="col-sm-3">
+                                    <h5 style="color: black;">Lámpara de Mesa Globo</h5>
+                                    <p>Lámpara Globo 20 Cm Vidrio Opal Velador- Artico Store</p>
                                 </div>
-
+                                <div class="col-sm-3">
+                                    <h5 style="color: black;">$2545,75</h5>
+                                </div>
+                                <div class="col-sm-3">
+                                    <button class="btn btn-primary" type="submit">Comprar Ahora</button>
+                                </div>
                             </div>
                         </div>
 
@@ -122,12 +156,15 @@
                         <!--p>Si aún no estás decidido en comprar algún producto de tu carrito, podés dejarlo aquí.</p-->
                         <div class="col">
                             <div class="row">
-                                <div class="card" style="width: 18rem;">
-                                    <img src="https://arcencohogar.vtexassets.com/arquivos/ids/295966-500-auto?v=637665755495570000&width=500&height=auto&aspect=true" class="card-img-top" alt="sabanas-microfibra">
-                                    <div class="card-body">
-                                        <h5 class="card-title" style="color: black;">$4495</h5>
-                                        <p class="card-text">Juego Sabanas Microfibra</p>
-                                    </div>
+                                <img src="https://arcencohogar.vtexassets.com/arquivos/ids/295966-500-auto?v=637665755495570000&width=500&height=auto&aspect=true" class="card-img-top" alt="sabanas-microfibra">
+                                <div class="col-sm-3">
+                                    <p class="card-text">Juego Sabanas Microfibra</p>
+                                </div>
+                                <div class="col-sm-3">
+                                    <h5 class="card-title" style="color: black;">$4495</h5>
+                                </div>
+                                <div class="col-sm-3">
+                                    <button class="btn btn-primary" type="submit">Comprar Ahora</button>
                                 </div>
                             </div>
                         </div>
@@ -143,10 +180,10 @@
         <!-- FIN CONTENEDOR -->
 
         <!--Contenedor Medios de Pago-->
-        <div class="container mt-4" style="background-color: grey; padding: 0;">
+        <div class="container mt-4" style="background-color: rgb(214, 214, 89); padding: 0;">
             <div class="row p-1">
-                <h5 style="color: white; text-align: center;">Medios de Pago</h5>
-                <div class="col-sm-1" style="width: 10rem;">
+                <h5 style="text-align: center;">Medios de Pago</h5>
+                <div class="col-sm-3" style="width: 10rem;">
                     <p>Hasta 12 cuotas sin tarjetas</p>
                 </div>
                 <div class="col-sm-1" style="width: 10rem;">
