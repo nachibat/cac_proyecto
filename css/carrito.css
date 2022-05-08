@@ -288,10 +288,20 @@ main button {
 
 .containerMedioDePago div img {
     line-height: 100%;
+    text-align: center;
     /*para achica espacio entre etiquetas*/
 }
 
 .containerMedioDePago div p {
     line-height: 100%;
+    text-align: center;
     /*para achica espacio entre etiquetas*/
+}
+
+.containerMedioDePago div h5 {
+    text-align: center;
+}
+
+.containerMedioDePago div button {
+    text-align: center;
 }
