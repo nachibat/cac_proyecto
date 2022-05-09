@@ -66,26 +66,6 @@ div a {
     color: aqua;
 }
 
-div.container img.icono1 {
-    float: left;
-    margin-right: 15px;
-}
-
-div.container img.icono2 {
-    float: left;
-    margin-right: 15px;
-}
-
-div.container img.icono3 {
-    float: left;
-    margin-right: 15px;
-}
-
-div.container img.icono4 {
-    float: left;
-    margin-right: 15px;
-}
-
 div.container a {
     padding: 0px;
 }
@@ -95,59 +75,34 @@ footer .icons a {
     transition: color 0.35s;
 }
 
-img.class a ion-icon{
+img.class a ion-icon {
     font-size: 30px;
     color: blue;
     margin: 5px;
-} 
-
-header .icons a ion-icon{
-    font-size: 30px;
-    color: white;
-    margin: 5px;
-} 
-
-header .icons a ion-icon{
-    font-size: 30px;
-    color: white;
-    margin: 5px;
-} 
-
-header .icons a ion-icon{
-    font-size: 30px;
-    color: white;
-    margin: 5px;
-} 
-
-header .icons a ion-icon{
-    font-size: 30px;
-    color: white;
-    margin: 5px;
-} 
-
-.containerListaCategoria {
-    width: 80%;
-    margin: 20px auto;
-    background-color: rgb(49, 47, 47);
-    color: rgb(128, 128, 128);
-    padding: 15px;
-    border-radius: 10px;
 }
 
-.containerListaCategoria a {
-    text-decoration: none;
+header .icons a ion-icon {
+    font-size: 30px;
+    color: white;
+    margin: 5px;
 }
 
-.containerListaCategoria img {
-    width: 80px;
-    height: 80px;
+header .icons a ion-icon {
+    font-size: 30px;
+    color: white;
+    margin: 5px;
 }
 
-div.containerListaCategoria h5 {
-    color: grey;
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 0;
+header .icons a ion-icon {
+    font-size: 30px;
+    color: white;
+    margin: 5px;
+}
+
+header .icons a ion-icon {
+    font-size: 30px;
+    color: white;
+    margin: 5px;
 }
 
 footer .icons div:nth-child(1) a:hover {
@@ -183,45 +138,6 @@ footer ul li a:hover {
     color: #e1e1e1;
 }
 
-.containerCarrito {
-    width: 80%;
-    margin: 20px auto;
-    background-color: white;
-    color: #fff;
-    padding: 15px;
-    border-radius: 5px;
-}
-
-#a1 {
-    color: white;
-    font-size: 15px;
-}
-
-.containerCarrito div h3 {
-    color: black;
-    font-size: 25px;
-    font-weight: inherit;
-    margin: 0;
-    padding-top: 50px;
-    padding-right: 10px;
-    padding-left: 10px;
-}
-
-.containerCarrito div p {
-    color: grey;
-    padding-bottom: 10px;
-}
-
-
-/* Productos */
-
-.contenedor {
-    margin: 0 100px;
-}
-
-
-/* Fin Productos */
-
 
 /* Login */
 
@@ -237,10 +153,27 @@ main form {
 
 main button {
     margin: auto;
-    display: block;
     width: 100%;
 }
 
-#Pararegistrarse {
-    text-align: center;
+
+/*Tarjeta*/
+
+.containerTarjeta {
+    /*width: 70%;*/
+    width: 80%;
+    margin: 20px auto;
+    background-color: white;
+    color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.containerProductoTarjeta {
+    width: 80%;
+    margin: 20px auto;
+    background-color: white;
+    color: black;
+    padding: 15px;
+    border-radius: 10px;
 }

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/tarjeta.css">
+    <title> E-STORE </title>
+    <link rel="shortcut icon" href="Images/IMG.png">
+</head>
+
+
+<body style="background-color: whitesmoke">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="../Images/gif.webp" class="GIFE-STORE" alt="..." width="100"> </img>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Nosotros</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Productos
+              </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#"> Indumetaria </a></li>
+                                <li><a class="dropdown-item" href="#"> Electrodomesticos </a></li>
+                                <li><a class="dropdown-item" href="#"> Muebles </a></li>
+                                <li><a class="dropdown-item" href="#"> Rodados </a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#"> Ofertas </a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../pages/Login.html" class="nav-link" aria-current="page">Login </a>
+                        </li>
+                    </ul>
+
+                    <form class="d-flex">
+                        <div class="row text-center icons">
+                            <a href="../pages/carrito.html" class="cartLink" id="cart-head">
+                                <ion-icon name="cart" class="icon icon-cart"></ion-icon>
+                            </a>
+                        </div>
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <main>
+        <!-- CONTENIDO PRODUCTO TARJETA -->
+        <div class="containerProductoTarjeta">
+            <div class="card mb-3">
+                <div class="row">
+                    <div class="col-md-2">
+                        <img width="200" height="200" src="https://arcencohogar.vtexassets.com/arquivos/ids/285016-500-auto?v=637651649771170000&width=500&height=auto&aspect=true" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Lámpara Colgante Ganges</h5>
+                            <p style="color: grey;" class="card-text">Lámpara Colgante Ganges 3 Luces,38 Cm. Abitare</p>
+                            <p style="color: grey;" class="card-text">Cantidad: 1</p>
+                            <div class="row">
+                                <div class="col">
+                                    <p style="color: grey;" class="card-text">Producto</p>
+                                    <p style="color: grey;" class="card-text">Envío</p>
+                                    <p style="color: grey;" class="card-text">Protección</p>
+                                </div>
+                                <div class="col">
+                                    <p style="color: grey;" class="card-text">$4325.00</p>
+                                    <p style="color: green;" class="card-text">Gratis</p>
+                                    <p style="color: grey;" class="card-text">$1000</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTENIDO TARJETA -->
+        <div class="containerTarjeta mt-0" style="background-color: white;">
+
+            <div class="row mt-5 mb-3">
+
+                <h5 style="color: black;" class="mt-0">Ingresa una nueva tarjeta</h5>
+                <div class="col-5 pe-5">
+                    <div class="input-group mb-3 ">
+                        <input type="text " class="form-control " placeholder="Número de Tarjeta " aria-label="Username ">
+                    </div>
+
+                    <div class="input-group mb-3 ">
+                        <input type="text " class="form-control " placeholder="Número y Apellido" aria-label="Username ">
+                    </div>
+
+                    <div class="input-group mb-3 ">
+                        <input type="text " class="form-control " placeholder="Código seguridad " aria-label="Username ">
+                        <input type="text " class="form-control " placeholder="Fecha Expiración" aria-label="Username ">
+                    </div>
+                    <div class="input-group mb-3 ">
+                        <input type="text " class="form-control " placeholder="Dni del titular de la tarjeta " aria-label="Username ">
+                    </div>
+                    <div>
+                        <button type="button" class="btn btn-primary" onclick="ComprarProductoTarjeta()">Comprar</button>
+                    </div>
+                </div>
+
+                <div class="col-3">
+                    <!--Inicia 2da columna de card-->
+                    <img width="200" height="200" src="https://cdn-icons.flaticon.com/png/512/4822/premium/4822716.png?token=exp=1651976631~hmac=745c5ec32e6ad2adfbb6fb6863e46b44">
+                </div>
+
+                <div class="col-3">
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="container-fluid text-light bg-dark mt-3 pt-3 pb-3">
+        <div class="row text-center icons">
+            <div class="col-5 text-end">
+                <a href="#">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+            </div>
+            <div class="col-2">
+                <a href="#">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+            </div>
+            <div class="col-5 text-start">
+                <a href="#">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+            </div>
+        </div>
+        <div class="row pt-4 pb-4">
+            <div class="col-12">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Quiénes Somos</a></li>
+                    <li><a href="#">Preguntas frecuentes</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-12">&copy; 2022 Todos los derechos reservados</div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js "></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js " integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p " crossorigin="anonymous "></script>
+    <script src="../js/tarjeta.js"></script>
+</body>
+
+</html>

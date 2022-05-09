@@ -95,35 +95,35 @@ footer .icons a {
     transition: color 0.35s;
 }
 
-img.class a ion-icon{
+img.class a ion-icon {
     font-size: 30px;
     color: blue;
     margin: 5px;
-} 
+}
 
-header .icons a ion-icon{
+header .icons a ion-icon {
     font-size: 30px;
     color: white;
     margin: 5px;
-} 
+}
 
-header .icons a ion-icon{
+header .icons a ion-icon {
     font-size: 30px;
     color: white;
     margin: 5px;
-} 
+}
 
-header .icons a ion-icon{
+header .icons a ion-icon {
     font-size: 30px;
     color: white;
     margin: 5px;
-} 
+}
 
-header .icons a ion-icon{
+header .icons a ion-icon {
     font-size: 30px;
     color: white;
     margin: 5px;
-} 
+}
 
 .containerListaCategoria {
     width: 80%;
@@ -242,5 +242,66 @@ main button {
 }
 
 #Pararegistrarse {
+    text-align: center;
+}
+
+
+/*Carrito*/
+
+.containerCarrito div h3 {
+    color: black;
+    font-size: 25px;
+    font-weight: inherit;
+    margin: 0;
+    padding-top: 50px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.containerCarrito div p {
+    color: grey;
+    padding-bottom: 10px;
+}
+
+.containerCarrito div img {
+    width: 150px;
+    height: 100px;
+}
+
+.containerCarrito {
+    width: 80%;
+    margin: 20px auto;
+    background-color: white;
+    color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.containerMedioDePago {
+    width: 80%;
+    margin: 20px auto;
+    background-color: white;
+    color: black;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.containerMedioDePago div img {
+    line-height: 100%;
+    text-align: center;
+    /*para achica espacio entre etiquetas*/
+}
+
+.containerMedioDePago div p {
+    line-height: 100%;
+    text-align: center;
+    /*para achica espacio entre etiquetas*/
+}
+
+.containerMedioDePago div h5 {
+    text-align: center;
+}
+
+.containerMedioDePago div button {
     text-align: center;
 }
