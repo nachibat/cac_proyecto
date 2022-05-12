@@ -1,3 +1,7 @@
+const ultimos = document.getElementById('ult-visitados');
+const dest = document.getElementById('destacados');
+
+let carrito = [];
 const productos = [
     {
         id: 1,
@@ -64,7 +68,7 @@ const productos = [
     },
     {
         id: 8,
-        nombre: 'Monopatín eléctrico Xiaomi Essential',
+        nombre: 'Monopatín eléctrico Xiaomi',
         img: 'https://pardohogar.vtexassets.com/arquivos/ids/172278-800-auto?v=637716366844030000&width=800&height=auto&aspect=true',
         precio: 84999,
         descripcion: 'Monopatín Xioami con pantalla LED con indicador de velocidad, nivel de batería y km. Con luz delantera de alto brillo 1.1W. Velocidad máxima de 20Km/h',
@@ -95,3 +99,57 @@ localStorage.setItem('productos', JSON.stringify(productos));
 
 // const prod = JSON.parse(localStorage.getItem('productos') || []);
 // console.log(prod);
+
+const ult_visitados = [];
+const destacados = [];
+ult_visitados.push(productos[9]);
+ult_visitados.push(productos[7]);
+ult_visitados.push(productos[6]);
+ult_visitados.push(productos[3]);
+console.log(ult_visitados);
+destacados.push(productos[0]);
+destacados.push(productos[8]);
+destacados.push(productos[4]);
+destacados.push(productos[1]);
+console.log(destacados);
+
+ult_visitados.forEach(item => {
+    const card = `
+        <div class="col">
+            <div class="card">
+            <img src="${item.img}" class="card-img" alt="${item.nombre}" style="width:100%; height: 200px; object-fit:cover;">
+            <div class="card-body">
+                <h5 class="card-title">$ ${item.precio}</h5>
+                <p class="card-text">${item.nombre}</p>
+                <button id="${item.id}" onclick="agregarCarrito(${item.id})" href="#" class="btn btn-dark text-center">Agregar al carrito</button>
+            </div>
+            </div>        
+        </div>
+    `;
+    ultimos.innerHTML += card;
+});
+
+destacados.forEach(item => {
+    const card = `
+        <div class="col">
+            <div class="card">
+            <img src="${item.img}" class="card-img" alt="${item.nombre}" style="width:100%; height: 200px; object-fit:cover;">
+            <div class="card-body">
+                <h5 class="card-title">$ ${item.precio}</h5>
+                <p class="card-text">${item.nombre}</p>
+                <button id="${item.id}" onclick="agregarCarrito(${item.id})" href="#" class="btn btn-dark text-center">Agregar al carrito</button>
+            </div>
+            </div>        
+        </div>
+    `;
+    dest.innerHTML += card;
+});
+
+const agregarCarrito = (id) => {
+    const producto = productos.find(e => e.id === id);
+    const button = document.getElementById(id);
+    carrito.push(producto);
+    button.innerHTML = "Agregado al carrito";
+    button.setAttribute('disabled', '');
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+}

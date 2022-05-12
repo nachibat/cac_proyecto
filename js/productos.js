@@ -20,7 +20,7 @@ productos.forEach(item => {
         </div>
         </div>
     `;
-    listProd.innerHTML += card
+    listProd.innerHTML += card;
 });
 
 
