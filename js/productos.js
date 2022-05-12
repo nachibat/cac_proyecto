@@ -1,5 +1,6 @@
 const productos = JSON.parse(localStorage.getItem('productos') || []);
 const listProd = document.getElementById('listProd');
+let carrito = [];
 
 productos.forEach(item => {
     const card = `
@@ -13,7 +14,7 @@ productos.forEach(item => {
                     <h5 class="card-title">${item.nombre}</h5>
                     <p class="card-text">${item.descripcion}</p>
                     <p class="card-text"><small class="text-muted">$ ${item.precio}</small></p>
-                    <button onclick="agregarCarrito(${item.id})" id="agregar" class="btn btn-dark text-center" style="width:100%">Agregar al carrito</button>
+                    <button id="${item.id}" onclick="agregarCarrito(${item.id})" id="agregar" class="btn btn-dark text-center" style="width:100%">Agregar al carrito</button>
                 </div>
             </div>
         </div>
@@ -23,6 +24,11 @@ productos.forEach(item => {
 });
 
 
-const agregarCarrito = (producto) => {
-    console.log(producto);
+const agregarCarrito = (id) => {
+    const producto = productos.find(e => e.id === id);
+    const button = document.getElementById(id);
+    carrito.push(producto);
+    button.innerHTML = "Agregado al carrito";
+    button.setAttribute('disabled', '');
+    localStorage.setItem('carrito', JSON.stringify(carrito));
 }
