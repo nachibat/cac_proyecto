@@ -1,6 +1,6 @@
-const productos = JSON.parse(localStorage.getItem('productos') || []);
+const productos = JSON.parse(localStorage.getItem('productos')) || [];
+let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 const listProd = document.getElementById('listProd');
-let carrito = [];
 
 productos.forEach(item => {
     const card = `
