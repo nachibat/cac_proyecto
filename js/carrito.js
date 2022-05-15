@@ -1,7 +1,7 @@
 const carrito = JSON.parse(localStorage.getItem('carrito') || []);
 console.log(carrito);
 const listCarrito = document.getElementById('listCarrito');
-const totalpagar = document.getElementById('listTotalPagar');
+const listTotalPagar = document.getElementById('listTotalPagar');
 
 var TotalPagar = 0;
 carrito.forEach(item => {
@@ -30,7 +30,7 @@ carrito.forEach(item => {
 const EliminarCarrito = (id) => {
     const listaCarritoModificada = carrito.find(e => e.id === id);
     const button = document.getElementById(id);
-
+    var TotalPagarResta = 0;
     const myIndex = carrito.indexOf(listaCarritoModificada)
     if (myIndex !== -1) {
         carrito.splice(myIndex, 1);
@@ -41,7 +41,7 @@ const EliminarCarrito = (id) => {
 
     const card = ``;
     listCarrito.innerHTML = card;
-
+    listTotalPagar.innerHTML = ``;
     carrito.forEach(item => {
         const card = `<div class="row">
                                     <div class="col-sm-3 mt-4 text-center">
@@ -59,8 +59,8 @@ const EliminarCarrito = (id) => {
                                     </div>
                                 </div> `;
         listCarrito.innerHTML += card;
-        TotalPagar += item.precio;
-        listTotalPagar.innerHTML = `<h5 style="color: black">$ ${TotalPagar}</h5>`
+        TotalPagarResta += item.precio;
+        listTotalPagar.innerHTML = `<h5 style="color: black">$ ${TotalPagarResta}</h5>`
 
     });
 }
