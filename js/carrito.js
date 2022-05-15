@@ -1,30 +1,68 @@
-let img;
-let p;
-let h5;
+const carrito = JSON.parse(localStorage.getItem('carrito') || []);
+console.log(carrito);
+const listCarrito = document.getElementById('listCarrito');
+const listTotalPagar = document.getElementById('listTotalPagar');
+
+var TotalPagar = 0;
+carrito.forEach(item => {
+    const card = `<div class="row">
+                                <div class="col-sm-3 mt-4 text-center">
+                                <img style="width: 230px; height: 200px;" src="${item.img}" class="card-img-top" alt="pava-electrica">
+                                </div> 
+                                <div class="col-sm-3 mt-4 text-center">
+                                    <h5 style="color: black;">${item.nombre}</h5>
+                                    <p>${item.descripcion}</p>
+                                </div> 
+                                <div class="col-sm-3 mt-4 text-center">
+                                    <h5 style="color: black;">$ ${item.precio}</h5>
+                                </div>
+                                <div class="col-sm-3 mt-4 text-center">
+                                    <button id="${item.id}" onclick="EliminarCarrito(${item.id})" class="btn btn-danger btn-lg" tabindex="-1" role="button">Eliminar</button>
+                                </div>
+                            </div> `;
+    listCarrito.innerHTML += card;
+    TotalPagar += item.precio;
+    listTotalPagar.innerHTML = `<h5 style="color: black">$ ${TotalPagar}</h5>`
+
+});
 
 
-function AgregarAcarrito() { // Capturar los datos del formulario con js
-    // Clases en JS
-    //class ProductoCarrito {
+const EliminarCarrito = (id) => {
+    const listaCarritoModificada = carrito.find(e => e.id === id);
+    const button = document.getElementById(id);
+    var TotalPagarResta = 0;
+    const myIndex = carrito.indexOf(listaCarritoModificada)
+    if (myIndex !== -1) {
+        carrito.splice(myIndex, 1);
+    }
+    button.innerHTML = "Eliminado";
+    button.setAttribute('disabled', '');
+    localStorage.setItem('carrito', JSON.stringify(carrito));
 
-    // constructor() { // Obtengo las etiquetas (elementos) del DOM desde JS (index.html)
+    const card = ``;
+    listCarrito.innerHTML = card;
+    listTotalPagar.innerHTML = ``;
+    carrito.forEach(item => {
+        const card = `<div class="row">
+                                    <div class="col-sm-3 mt-4 text-center">
+                                    <img style="width: 230px; height: 200px;" src="${item.img}" class="card-img-top" alt="pava-electrica">
+                                    </div> 
+                                    <div class="col-sm-3 mt-4 text-center">
+                                        <h5 style="color: black;">${item.nombre}</h5>
+                                        <p>${item.descripcion}</p>
+                                    </div> 
+                                    <div class="col-sm-3 mt-4 text-center">
+                                        <h5 style="color: black;">$ ${item.precio}</h5>
+                                    </div>
+                                    <div class="col-sm-3 mt-4 text-center">
+                                        <button id="${item.id}" onclick="EliminarCarrito(${item.id})" class="btn btn-danger btn-lg" tabindex="-1" role="button">Eliminar</button>
+                                    </div>
+                                </div> `;
+        listCarrito.innerHTML += card;
+        TotalPagarResta += item.precio;
+        listTotalPagar.innerHTML = `<h5 style="color: black">$ ${TotalPagarResta}</h5>`
 
-    let img = document.getElementById("img");
-    let p = document.getElementById("p");
-    let h5 = document.getElementById("h5");
-    //let a = document.getElementById("a").value;
-    localStorage.setItem("imagen", img);
-    localStorage.setItem("precio", h5);
-    localStorage.setItem("descripcion", p);
-
-    //}
-    //}
-
-    alert("Se agregó el producto al carrito");
-    console.log(p, h5, img);
-
-    console.log(localStorage.getItem("imagen"));
-    console.log(localStorage.getItem("precio"));
-    console.log(localStorage.getItem("descripcion"));
+    });
 }
-//localStorage.clear()
+
+console.log(carrito);
