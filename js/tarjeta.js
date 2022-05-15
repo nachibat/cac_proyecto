@@ -12,7 +12,7 @@ carrito.forEach(item => {
                         <div class="card-body">
                             <h5 class="card-title">${item.nombre}</h5>
                             <p style="color: grey;" class="card-text">${item.descripcion}</p>
-                            <p style="color: grey;" class="card-text">Cantidad: </p>
+                            <!--p style="color: grey;" class="card-text">Cantidad: </p-->
                             <div class="row">
                                 <div class="col">
                                     <p style="color: grey;" class="card-text">Producto</p>
