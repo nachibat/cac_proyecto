@@ -1,7 +1,7 @@
 const ultimos = document.getElementById('ult-visitados');
 const dest = document.getElementById('destacados');
 
-let carrito = [];
+let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 const productos = [
     {
         id: 1,
@@ -106,44 +106,10 @@ ult_visitados.push(productos[9]);
 ult_visitados.push(productos[7]);
 ult_visitados.push(productos[6]);
 ult_visitados.push(productos[3]);
-console.log(ult_visitados);
 destacados.push(productos[0]);
 destacados.push(productos[8]);
 destacados.push(productos[4]);
 destacados.push(productos[1]);
-console.log(destacados);
-
-ult_visitados.forEach(item => {
-    const card = `
-        <div class="col">
-            <div class="card">
-            <img src="${item.img}" class="card-img" alt="${item.nombre}" style="width:100%; height: 200px; object-fit:cover;">
-            <div class="card-body">
-                <h5 class="card-title">$ ${item.precio}</h5>
-                <p class="card-text">${item.nombre}</p>
-                <button id="${item.id}" onclick="agregarCarrito(${item.id})" href="#" class="btn btn-dark text-center">Agregar al carrito</button>
-            </div>
-            </div>        
-        </div>
-    `;
-    ultimos.innerHTML += card;
-});
-
-destacados.forEach(item => {
-    const card = `
-        <div class="col">
-            <div class="card">
-            <img src="${item.img}" class="card-img" alt="${item.nombre}" style="width:100%; height: 200px; object-fit:cover;">
-            <div class="card-body">
-                <h5 class="card-title">$ ${item.precio}</h5>
-                <p class="card-text">${item.nombre}</p>
-                <button id="${item.id}" onclick="agregarCarrito(${item.id})" href="#" class="btn btn-dark text-center">Agregar al carrito</button>
-            </div>
-            </div>        
-        </div>
-    `;
-    dest.innerHTML += card;
-});
 
 const agregarCarrito = (id) => {
     const producto = productos.find(e => e.id === id);
@@ -153,3 +119,28 @@ const agregarCarrito = (id) => {
     button.setAttribute('disabled', '');
     localStorage.setItem('carrito', JSON.stringify(carrito));
 }
+
+const crearCard = (item) => {
+    return `
+        <div class="col">
+            <div class="card">
+            <img src="${item.img}" class="card-img" alt="${item.nombre}" style="width:100%; height: 200px; object-fit:cover;">
+            <div class="card-body">
+                <h5 class="card-title">$ ${item.precio}</h5>
+                <p class="card-text">${item.nombre}</p>
+                <button id="${item.id}" onclick="agregarCarrito(${item.id})" href="#" class="btn btn-dark text-center">Agregar al carrito</button>
+            </div>
+            </div>        
+        </div>
+    `;
+}
+
+ult_visitados.forEach(item => {
+    const card = crearCard(item);
+    ultimos.innerHTML += card;
+});
+
+destacados.forEach(item => {
+    const card = crearCard(item);
+    dest.innerHTML += card;
+});
