@@ -70,31 +70,35 @@
     <main>
 
 
-        <form>
+        <form id="form">
             <h1>Registrarte</h1>
             <div id="nombres">
-                <input type="text" id="nombre" value="" name="nombre" placeholder="Nombre" required>
-                <input type="text" id="apellido" name="apellido" placeholder="Apellido" required>
+                <input type="text" id="nombre" value="" name="nombre" placeholder="Nombre" >
+                <input type="text" id="apellido" name="apellido" placeholder="Apellido" >
             </div>
-            <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
-            <label id="label-nacimiento">Fecha de nacimiento<input id="input-nacimiento" type="date" required></label>
+            <p class="text-danger mb-2 d-none" id="alertNombreApellido"></p> 
+            <input type="email" id="email" name="email" placeholder="Correo electrónico">
+            <p class="text-danger mb-2 d-none" id="alertEmail"></p>
+            <label id="label-nacimiento">Fecha de nacimiento<input id="input-nacimiento" type="date"></label>
+            <p class="text-danger mb-2 d-none" id="alertFechaNacimiento"></p>
             <div>
                 <p>Sexo</p>
-                <label>Masculino</label><input type="radio" value="masculino" name="sexo" class="sexo">
-                <label>Femenino</label><input type="radio" value="femenino" name="sexo" class="sexo">
-                <label>Otro</label><input type="radio" value="otro" name="sexo" class="sexo">
+                <label>Masculino</label><input type="radio" id="sexoMas" value="masculino" name="sexo" class="sexo">
+                <label>Femenino</label><input type="radio" id="sexoFem" value="femenino" name="sexo" class="sexo">
+                <label>Otro</label><input type="radio" id="sexoOtro" value="otro" name="sexo" class="sexo">
             </div>
-            <input type="text" name="domicilio" placeholder="Domicilio" required>
-            <input type="text" name="codigo_postal" placeholder="Código Postal" required>
-            <input type="password" id="pass" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" title="La contraseña debe tener al menos una mayúscula, una minúscula y un número." placeholder="Contraseña" required>
-            <input type="password" id="confirmaPass" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" title="La contraseña debe tener al menos una mayúscula, una minúscula y un número." placeholder="Confirma tu contraseña" required>
-            <div class="alert alert-danger d-none" role="alert" id="alertPass">
-                <strong>Atención!</strong> Las contraseñas no coinciden.
-              </div>
-            <button type="button" onclick="guardar()">Registrarse</button>
+            <p class="text-danger mb-2 d-none" id="alertSexo"></p>
+            <input type="text" id="domicilio" name="domicilio" placeholder="Domicilio">
+            <p class="text-danger mb-2 d-none" id="alertDomicilio"></p>
+            <input type="text" id="codigoPostal" name="codigo_postal" placeholder="Código Postal">
+            <p class="text-danger mb-2 d-none" id="alertCodigoPostal"></p>
+            <input type="password" id="pass" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" title="La contraseña debe tener al menos una mayúscula, una minúscula y un número." placeholder="Contraseña">
+            <input type="password" id="confirmaPass" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" title="La contraseña debe tener al menos una mayúscula, una minúscula y un número." placeholder="Confirma tu contraseña">
+            <p class="text-danger mb-2 d-none" id="alertPass"></p>
+            <button type="submit" class="btn btn-primary">Registrarse</button>
         </form>
 
-        <div class="alert alert-success d-none" role="alert"  id="alertSuccess"></div>
+        <div class="alert alert-success mt-2 d-none" id="alertSuccess"></div>
 
     </main>
 
