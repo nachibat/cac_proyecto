@@ -38,8 +38,6 @@ formulario.addEventListener("submit", (evento) => {
 
     alertSuccess.classList.add("d-none");
 
-
-
 // GENERAMOS UN ARRAY CON LOS MENSAJES DE ERROR
     const errores = [];
 
@@ -54,14 +52,15 @@ formulario.addEventListener("submit", (evento) => {
     else {
         if (userEmail.value.length > 15) {
             userEmail-classList.add("is-invalid");
+
             errores.push({
                 tipo: alertEmail,
                 msg: "Supera el limite de caracteres",
             });
         }
         else {
-            userEmail.classList.remove("is-invalid");
-            userEmail.classList.add("is-valid");
+        userEmail.classList.remove("is-invalid");
+        userEmail.classList.add("is-valid");
             alertEmail.classList.add("d-none"); 
         }  
     } 
