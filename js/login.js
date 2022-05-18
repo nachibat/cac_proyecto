@@ -1,5 +1,9 @@
-login.js
+const usuario = {
+    email: 'email@email.com',
+    pass: 'h1234'
+}
 
+localStorage.setItem('user', JSON.stringify(usuario));
 
 const formulario = document.getElementById("form");
 const userEmail = document.getElementById("email");
@@ -8,8 +12,10 @@ const alertSuccess = document.getElementById("alertSuccess");
 const alertEmail = document.getElementById("alertEmail");
 const alertPass = document.getElementById("alertPass");
 
-const email = "email@email.com";
-const pass = "Hola123";
+const user = JSON.parse(localStorage.getItem('user')) || [];
+console.log(user);
+const email = user.email;
+const pass = user.pass;
 
 const pintarMensajeExito = () => {
     alertSuccess.classList.remove("d-none");
@@ -32,6 +38,8 @@ formulario.addEventListener("submit", (evento) => {
 
     alertSuccess.classList.add("d-none");
 
+
+
 // GENERAMOS UN ARRAY CON LOS MENSAJES DE ERROR
     const errores = [];
 
@@ -44,22 +52,23 @@ formulario.addEventListener("submit", (evento) => {
             msg: "Email Inválido", });}
         
     else {
-        if (userEmail.value.length > 15){
+        if (userEmail.value.length > 15) {
             userEmail-classList.add("is-invalid");
-
             errores.push({
                 tipo: alertEmail,
                 msg: "Supera el limite de caracteres",
-            });}
-
-        else{
-        userEmail.classList.remove("is-invalid");
-        userEmail.classList.add("is-valid");
-        alertEmail.classList.add("d-none"); }   
+            });
+        }
+        else {
+            userEmail.classList.remove("is-invalid");
+            userEmail.classList.add("is-valid");
+            alertEmail.classList.add("d-none"); 
+        }  
+    } 
 
 // Validamos la contraseña del user
 
-    if (parseInt(userPass.value) != pass) {
+    if (userPass.value != pass) {
         errores.push({
             tipo: alertPass,
             msg: "Contraseña Inválida",
@@ -72,4 +81,6 @@ formulario.addEventListener("submit", (evento) => {
         return; }
 
     console.log("Formulario enviado con éxito");
-    pintarMensajeExito();});
+    pintarMensajeExito();
+
+    });
