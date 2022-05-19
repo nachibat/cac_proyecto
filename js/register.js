@@ -155,8 +155,12 @@ formulario.addEventListener("submit", (evento) => {
     localStorage.setItem('user', JSON.stringify(user));
 
 
-    //pintarMensajeExito();                       //ME GUSTARÍA QUE MUESTRE UN MENSAJE DE REGISTRO EXITOSO, ESPERE 2 SEGUNDOS Y REDIRIGA A LA PÁGINA DE LOGIN
-    alert("Registro exitoso!")
-    window.location.href = '../pages/login.html';
+    pintarMensajeExito(); 
+                     
+    function redirigir(){
+        window.location.href = '../pages/login.html';
+      }
+      
+      setTimeout(redirigir, 2000);
 
 });
