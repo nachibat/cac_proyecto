@@ -1,10 +1,3 @@
-const usuario = {
-    email: 'email@email.com',
-    pass: 'h1234'
-}
-
-localStorage.setItem('user', JSON.stringify(usuario));
-
 const formulario = document.getElementById("form");
 const userEmail = document.getElementById("email");
 const userPass = document.getElementById("pass");
