@@ -1,7 +1,21 @@
 const carrito = JSON.parse(localStorage.getItem('carrito') || []);
-console.log(carrito);
 const listCarrito = document.getElementById('listCarrito');
 const listTotalPagar = document.getElementById('listTotalPagar');
+
+const verificarCuenta = () => {
+    if (carrito.length != 0) {
+        counter.innerHTML = carrito.length;
+        counter.classList.remove('d-none');
+        counter.classList.add('jump');
+        setTimeout(() => {
+            counter.classList.remove('jump');
+        }, 600);
+    } else {
+        counter.classList.remove('jump');
+        counter.classList.add('d-none');
+    }
+}
+verificarCuenta();
 
 var TotalPagar = 0;
 carrito.forEach(item => {
@@ -34,6 +48,7 @@ const EliminarCarrito = (id) => {
     const myIndex = carrito.indexOf(listaCarritoModificada)
     if (myIndex !== -1) {
         carrito.splice(myIndex, 1);
+        verificarCuenta();
     }
     button.innerHTML = "Eliminado";
     button.setAttribute('disabled', '');
@@ -61,8 +76,6 @@ const EliminarCarrito = (id) => {
         listCarrito.innerHTML += card;
         TotalPagarResta += item.precio;
         listTotalPagar.innerHTML = `<h5 style="color: black">$ ${TotalPagarResta}</h5>`
-
+        verificarCuenta();
     });
 }
-
-console.log(carrito);
