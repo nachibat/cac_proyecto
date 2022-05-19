@@ -8,7 +8,7 @@ const alertPass = document.getElementById("alertPass");
 const user = JSON.parse(localStorage.getItem('user')) || [];
 console.log(user);
 const email = user.email;
-const pass = user.pass;
+const pass = user.password;
 
 const pintarMensajeExito = () => {
     alertSuccess.classList.remove("d-none");
@@ -44,7 +44,7 @@ formulario.addEventListener("submit", (evento) => {
         
     else {
         if (userEmail.value.length > 15) {
-            userEmail-classList.add("is-invalid");
+            userEmail.classList.add("is-invalid");
 
             errores.push({
                 tipo: alertEmail,
