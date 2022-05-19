@@ -12,7 +12,8 @@ const pass = user.password;
 
 const pintarMensajeExito = () => {
     alertSuccess.classList.remove("d-none");
-    alertSuccess.textContent = "Login Exitoso";};
+    alertSuccess.textContent = "Login Exitoso";
+}
 
 
 const pintarMensajeError = (errores) => {
@@ -21,7 +22,7 @@ const pintarMensajeError = (errores) => {
     ((item) => {
         item.tipo.classList.remove("d-none");
         item.tipo.textContent = item.msg; });
-};
+}
 
 // FUNCION DEL EVENTO SUBMIT CON JS
 formulario.addEventListener("submit", (evento) => {
@@ -43,7 +44,7 @@ formulario.addEventListener("submit", (evento) => {
             msg: "Email Inválido", });}
         
     else {
-        if (userEmail.value.length > 15) {
+        if (userEmail.value.length > 40) {
             userEmail.classList.add("is-invalid");
 
             errores.push({
