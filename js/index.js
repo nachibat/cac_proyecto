@@ -1,7 +1,21 @@
 const ultimos = document.getElementById('ult-visitados');
 const dest = document.getElementById('destacados');
+const counter = document.getElementById('counter');
 
 let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
+const verificarCuenta = () => {
+    if (carrito.length != 0) {
+        counter.innerHTML = carrito.length;
+        counter.classList.remove('d-none');
+        counter.classList.add('jump');
+        setTimeout(() => {
+            counter.classList.remove('jump');
+        }, 600);
+    }
+}
+verificarCuenta();
+
 const productos = [
     {
         id: 1,
@@ -118,6 +132,7 @@ const agregarCarrito = (id) => {
     button.innerHTML = "Agregado al carrito";
     button.setAttribute('disabled', '');
     localStorage.setItem('carrito', JSON.stringify(carrito));
+    verificarCuenta();
 }
 
 const crearCard = (item) => {

@@ -2,6 +2,18 @@ const productos = JSON.parse(localStorage.getItem('productos')) || [];
 let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 const listProd = document.getElementById('listProd');
 
+const verificarCuenta = () => {
+    if (carrito.length != 0) {
+        counter.innerHTML = carrito.length;
+        counter.classList.remove('d-none');
+        counter.classList.add('jump');
+        setTimeout(() => {
+            counter.classList.remove('jump');
+        }, 600);
+    }
+}
+verificarCuenta();
+
 productos.forEach(item => {
     const card = `
         <div class="card mb-3">
@@ -31,4 +43,5 @@ const agregarCarrito = (id) => {
     button.innerHTML = "Agregado al carrito";
     button.setAttribute('disabled', '');
     localStorage.setItem('carrito', JSON.stringify(carrito));
+    verificarCuenta();
 }

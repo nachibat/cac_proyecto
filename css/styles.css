@@ -4,6 +4,32 @@
     box-sizing: border-box;
 }
 
+header .icons {
+    margin-right: 0px;
+    padding-top: 10px;
+}
+
+header .icons a {
+    position: relative;
+    text-decoration: none;
+}
+
+header .icons a .counter {
+    display: flex;
+    position: absolute;
+    right: 10px;
+    top: -5px;
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #ff0000;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
 header .icons a ion-icon {
     font-size: 30px;
     color: white;
@@ -101,30 +127,6 @@ img.class a ion-icon{
     margin: 5px;
 } 
 
-header .icons a ion-icon{
-    font-size: 30px;
-    color: white;
-    margin: 5px;
-} 
-
-header .icons a ion-icon{
-    font-size: 30px;
-    color: white;
-    margin: 5px;
-} 
-
-header .icons a ion-icon{
-    font-size: 30px;
-    color: white;
-    margin: 5px;
-} 
-
-header .icons a ion-icon{
-    font-size: 30px;
-    color: white;
-    margin: 5px;
-} 
-
 .containerListaCategoria {
     width: 80%;
     margin: 20px auto;
@@ -214,4 +216,45 @@ main button {
 
 #Pararegistrarse {
     text-align: center;
+}
+
+/*Tarjeta*/
+
+.containerTarjeta {
+    /*width: 70%;*/
+    width: 80%;
+    margin: 20px auto;
+    background-color: white;
+    color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.containerProductoTarjeta {
+    width: 80%;
+    margin: 20px auto;
+    background-color: white;
+    color: black;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* Animations */
+
+.jump {
+    animation: jump 0.4s linear;
+}
+
+@keyframes jump {
+    0% {
+        top: -5px;
+    }
+
+    50% {
+        top: -15px;
+    }
+
+    100% {
+        top: -5px;
+    }
 }
