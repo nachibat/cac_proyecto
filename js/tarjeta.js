@@ -2,31 +2,42 @@ const carrito = JSON.parse(localStorage.getItem('carrito') || []);
 console.log(carrito);
 const listCarrito = document.getElementById('listCarrito');
 
+const verificarCuenta = () => {
+    if (carrito.length != 0) {
+        counter.innerHTML = carrito.length;
+        counter.classList.remove('d-none');
+        counter.classList.add('jump');
+        setTimeout(() => {
+            counter.classList.remove('jump');
+        }, 600);
+    }
+}
+verificarCuenta();
 
 var TotalPagar = 0;
 carrito.forEach(item => {
-    const card = `<div class="row-md-2">
-                <img width="200" height="200" src="${item.img}" class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card-body">
-                            <h5 class="card-title">${item.nombre}</h5>
-                            <p style="color: grey;" class="card-text">${item.descripcion}</p>
-                            <!--p style="color: grey;" class="card-text">Cantidad: </p-->
-                            <div class="row">
-                                <div class="col">
-                                    <p style="color: grey;" class="card-text">Producto</p>
-                                    <p style="color: grey;" class="card-text">Envío</p>
-                                    <p style="color: grey;" class="card-text">Protección</p>
-                                </div>
-                                <div class="col">
-                                    <p style="color: grey;" class="card-text">$ ${item.precio}</p>
-                                    <p style="color: green;" class="card-text">Gratis</p>
-                                    <p style="color: grey;" class="card-text">$1000</p>
+    const card = `
+                    <div class="card border-secondary">
+                        <img width="200" height="200" src="${item.img}" class="img-fluid rounded-start" alt="...">
+                    
+                            <div class="card-body">
+                                <h5 class="card-header">${item.nombre}</h5>
+                                <p style="color: grey;" class="card-header">${item.descripcion}</p>
+                                <!--p style="color: grey;" class="card-text">Cantidad: </p-->
+                                <div class="row">
+                                    <div class="col">
+                                        <p style="color: grey;" class="card-text">Producto</p>
+                                        <p style="color: grey;" class="card-text">Envío</p>
+                                        <p style="color: grey;" class="card-text">Protección</p>
+                                    </div>
+                                    <div class="col">
+                                        <p style="color: grey;" class="card-text">$ ${item.precio}</p>
+                                        <p style="color: green;" class="card-text">Gratis</p>
+                                        <p style="color: grey;" class="card-text">$1000</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>`;
+`;
     listCarrito.innerHTML += card;
 
 });

@@ -21,14 +21,20 @@ var TotalPagar = 0;
 carrito.forEach(item => {
     const card = `<div class="row">
                                 <div class="col-sm-3 mt-4 text-center">
-                                <img style="width: 230px; height: 200px;" src="${item.img}" class="card-img-top" alt="pava-electrica">
+                                    <div class="card">
+                                        <img style="width: 230px; height: 200px;" src="${item.img}" class="card-img-top" alt="pava-electrica">
+                                    </div> 
                                 </div> 
-                                <div class="col-sm-3 mt-4 text-center">
+                                <div class="col-sm-2 mt-4 text-center">
+                                
                                     <h5 style="color: black;">${item.nombre}</h5>
                                     <p>${item.descripcion}</p>
                                 </div> 
-                                <div class="col-sm-3 mt-4 text-center">
+                                <div class="col-sm-2 mt-4 text-center">
                                     <h5 style="color: black;">$ ${item.precio}</h5>
+                                </div>
+                                <div class="col-sm-2 mt-4 text-center">
+                                    <!--h5 style="color: black;">$ ${item.precio}</h5-->
                                 </div>
                                 <div class="col-sm-3 mt-4 text-center">
                                     <button id="${item.id}" onclick="EliminarCarrito(${item.id})" class="btn btn-danger btn-lg" tabindex="-1" role="button">Eliminar</button>
@@ -60,14 +66,19 @@ const EliminarCarrito = (id) => {
     carrito.forEach(item => {
         const card = `<div class="row">
                                     <div class="col-sm-3 mt-4 text-center">
-                                    <img style="width: 230px; height: 200px;" src="${item.img}" class="card-img-top" alt="pava-electrica">
+                                        <div class="card">
+                                            <img style="width: 230px; height: 200px;" src="${item.img}" class="card-img-top" alt="pava-electrica">
+                                        </div> 
                                     </div> 
-                                    <div class="col-sm-3 mt-4 text-center">
+                                    <div class="col-sm-2 mt-4 text-center">
                                         <h5 style="color: black;">${item.nombre}</h5>
                                         <p>${item.descripcion}</p>
                                     </div> 
-                                    <div class="col-sm-3 mt-4 text-center">
+                                    <div class="col-sm-2 mt-4 text-center">
                                         <h5 style="color: black;">$ ${item.precio}</h5>
+                                    </div>
+                                    <div class="col-sm-2 mt-4 text-center">
+                                    <!--h5 style="color: black;">$ ${item.precio}</h5-->
                                     </div>
                                     <div class="col-sm-3 mt-4 text-center">
                                         <button id="${item.id}" onclick="EliminarCarrito(${item.id})" class="btn btn-danger btn-lg" tabindex="-1" role="button">Eliminar</button>
