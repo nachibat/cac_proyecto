@@ -1,3 +1,4 @@
+/*Comienzo Muestra de productos del carrito*/
 const carrito = JSON.parse(localStorage.getItem('carrito') || []);
 console.log(carrito);
 const listCarrito = document.getElementById('listCarrito');
@@ -73,3 +74,112 @@ function ComprarProductoTarjeta() { // Capturar los datos del formulario con js
     console.log(p, h5, img);
 
 }
+
+/*Fin Muestra de productos carrito*/
+
+/*Comienzo Formulario Tarjeta*/
+var formulario = document.getElementById("form");
+var numTarjeta = document.getElementById("numTarjeta");
+var nombre = document.getElementById("nombre");
+var apellido = document.getElementById("apellido");
+var dni = document.getElementById("dni");
+var codigoSeg = document.getElementById("codigoSeg");
+var fecExp = document.getElementById("fecExp");
+
+const pintarMensajeExito = () => {
+    alertSuccess.classList.remove("d-none");
+    alertSuccess.textContent = "Se realizó la compra correctamente!";
+};
+
+const pintarMensajeError = (errores) => {
+    //RECORREMOS LA LISTA DE ERRORES (ARRAY) => FUNCION FOREACH
+    errores.forEach((item) => {
+        item.tipo.classList.remove("d-none");
+        item.tipo.textContent = item.msg;
+    });
+
+};
+
+// FUNCION DEL EVENTO SUBMIT CON JS
+formulario.addEventListener("submit", (evento) => {
+
+    // SIEMPRE QUE EJECUTAMOS UN EVENTO DESDE JS CON HTML
+    // DEBEMOS INICIALIZAR EL EVENTO
+    evento.preventDefault();
+
+    alertSuccess.classList.add("d-none");
+
+    // GENERAMOS UN ARRAY CON LOS MENSAJES DE ERROR
+    const errores = [];
+
+    //Validamos Numero de Tarjeta
+    if (numTarjeta.value == "") {
+        errores.push({
+            tipo: alertTarjeta,
+            msg: "Ingrese número de tarjeta",
+        });
+    } else {
+        alertTarjeta.classList.add("d-none");
+    }
+
+    //  Validamos fecha de expiración
+    if (fecExp.value == "") {
+        errores.push({
+            tipo: alertCodSegFecExp,
+            msg: "Ingrese fecha de expiración y código de seguridad",
+        });
+    } else {
+        alertCodSegFecExp.classList.add("d-none");
+    }
+
+
+    // Validamos nombre y apellido
+    if (nombre.value == "" || apellido.value == "") {
+        errores.push({
+            tipo: alertNombreApellido,
+            msg: "Ingrese nombre y apellido",
+        });
+    } else {
+        alertNombreApellido.classList.add("d-none");
+    }
+
+    //  Validamos dni
+    if (dni.value == "") {
+        errores.push({
+            tipo: alertDNI,
+            msg: "Ingrese el DNI",
+        });
+    } else {
+        alertDNI.classList.add("d-none");
+    }
+
+
+    if (errores.length != 0) {
+        pintarMensajeError(errores);
+        return;
+    }
+
+
+    tarjeta = {
+        numeroTarjeta: numTarjeta.value,
+        CodigoSeguridad: codigoSeg.value,
+        FechaExpiracion: fecExp.value,
+        Nombre: nombre.value,
+        Apellido: apellido.value,
+        DNI: dni.value
+    }
+
+    localStorage.setItem('tarjeta', JSON.stringify(tarjeta));
+
+
+    pintarMensajeExito();
+
+    function redirigir() {
+        window.location.href = '../index.html';
+    }
+
+    setTimeout(redirigir, 2000);
+
+});
+
+//Fin Formulario Tarjeta

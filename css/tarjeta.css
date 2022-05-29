@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header .icons {
+    margin-right: 0px;
+    padding-top: 10px;
+}
+
+header .icons a {
+    position: relative;
+    text-decoration: none;
+}
+
+header .icons a .counter {
+    display: flex;
+    position: absolute;
+    right: 10px;
+    top: -5px;
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #ff0000;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+header .icons a ion-icon {
+    font-size: 30px;
+    color: white;
+    margin: 5px;
+}
+
+header ul {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.imagen-carousel {
+    height: 400px;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.h2cards {
+    margin-left: 51px;
+    margin-top: 50px;
+}
+
+.row-cards {
+    margin: 0px 100px 40px;
+}
+
+.card-img-top {
+    height: 18rem;
+}
+
+.btn-primary {
+    background-color: #202529;
+}
+
+.container {
+    width: 100%;
+    margin: 20px auto;
+    background-color: rgb(49, 47, 47);
+    color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+div h4 {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+div h2 {
+    text-align: center;
+}
+
+div a {
+    font-size: 15px;
+    color: aqua;
+}
+
+div.container img.icono1 {
+    float: left;
+    margin-right: 15px;
+}
+
+div.container img.icono2 {
+    float: left;
+    margin-right: 15px;
+}
+
+div.container img.icono3 {
+    float: left;
+    margin-right: 15px;
+}
+
+div.container img.icono4 {
+    float: left;
+    margin-right: 15px;
+}
+
+div.container a {
+    padding: 0px;
+}
+
+footer .icons a {
+    color: #ffffff;
+    transition: color 0.35s;
+}
+
+img.class a ion-icon {
+    font-size: 30px;
+    color: blue;
+    margin: 5px;
+}
+
+.containerListaCategoria {
+    width: 80%;
+    margin: 20px auto;
+    background-color: rgb(49, 47, 47);
+    color: rgb(128, 128, 128);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.containerListaCategoria a {
+    text-decoration: none;
+}
+
+.containerListaCategoria img {
+    width: 80px;
+    height: 80px;
+}
+
+div.containerListaCategoria h5 {
+    color: grey;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+footer .icons div:nth-child(1) a:hover {
+    color: #3b5998;
+}
+
+footer .icons div:nth-child(2) a:hover {
+    color: #E1306C;
+}
+
+footer .icons div:nth-child(3) a:hover {
+    color: #00acee;
+}
+
+footer .icons a ion-icon {
+    font-size: 50px;
+}
+
+footer ul {
+    display: flex;
+    padding: 0;
+    width: 100% !important;
+    list-style: none;
+    justify-content: space-evenly;
+}
+
+footer ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    color: #e1e1e1;
+}
+
+
+/* Productos */
+
+.contenedor {
+    margin: 0 100px;
+}
+
+
+/* Fin Productos */
+
+
+/* Login */
+
+main form {
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 20px;
+    width: 500px;
+    border: 1px solid #333;
+    border-radius: 0.5%;
+}
+
+main button {
+    margin: auto;
+    display: block;
+    width: 100%;
+}
+
+#Pararegistrarse {
+    text-align: center;
+}
+
+
+/*Tarjeta*/
+
+.containerTarjeta {
+    /*width: 70%;*/
+    width: 80%;
+    margin: 20px auto;
+    background-color: white;
+    color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.containerProductoTarjeta {
+    width: 80%;
+    margin: 20px auto;
+    background-color: white;
+    color: black;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+
+/* Animations */
+
+.jump {
+    animation: jump 0.4s linear;
+}
+
+@keyframes jump {
+    0% {
+        top: -5px;
+    }
+    50% {
+        top: -15px;
+    }
+    100% {
+        top: -5px;
+    }
+}
